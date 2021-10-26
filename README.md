@@ -8,20 +8,21 @@ This project framework provides the following features:
 
 - **MongoDB to CosmosDB Data Migration**
 - **Seven migration approaches are supported** by this project
-  1) mongoexport, wrangling/transformation, Azure Blob Storage, load CosmosDB with Azure Data Factory
-  1) mongoexport, wrangling/transformation, Azure Blob Storage, load CosmosDB with mongoimport
-  1) mongoexport, wrangling/transformation, Azure Blob Storage, load CosmosDB with DotNet Client program
-  1) mongoexport, wrangling/transformation, load CosmosDB with mongoimport
-  1) mongoexport, wrangling/transformation, load CosmosDB with DotNet Client program
-  1) mongoexport, no transformation, load CosmosDB with mongoimport
-  1) mongoexport, no transformation, load CosmosDB with DotNet Client program
+  - mongoexport, wrangling/transformation, Azure Blob Storage, load CosmosDB with Azure Data Factory
+  - mongoexport, wrangling/transformation, Azure Blob Storage, load CosmosDB with mongoimport
+  - mongoexport, wrangling/transformation, Azure Blob Storage, load CosmosDB with DotNet Client program
+  - mongoexport, wrangling/transformation, load CosmosDB with mongoimport
+  - mongoexport, wrangling/transformation, load CosmosDB with DotNet Client program
+  - mongoexport, no transformation, load CosmosDB with mongoimport
+  - mongoexport, no transformation, load CosmosDB with DotNet Client program
 
-- **The Process uses metadata-driven code generation to generate artifacts**
+- **The Process uses metadata-driven code generation to generate executable artifacts**
   - shell scripts
   - configuration files
   - Azure Data Factory JSON code files
-- A **User-edited mapping file which maps source to target databases**, can be generated
+- A **User-edited mapping file which maps source to target databases**; this can be generated
 - The **intent is to have zero human edits of the generated code/artifacts**
+- The intent is to support migrating dozens/hundreds of databases and thousands of collections
 - The **mongoexport** utility is used to extract data from the source database/containers
 - The Process supports optionally transforming your collection/container design
 - The Process supports data transformation from source to target database
@@ -58,7 +59,7 @@ has network access to Azure VMs.
 
 ### Quickstart
 
-[See the Documentation](docs/README.md)
+[See the Documentation, Summary of Actions and Scripts to Execute](docs/README.md)
 
 ## Demo
 
