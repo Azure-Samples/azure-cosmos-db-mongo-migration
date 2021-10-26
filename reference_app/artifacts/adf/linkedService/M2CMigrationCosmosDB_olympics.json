@@ -1,0 +1,13 @@
+{
+	"name": "M2CMigrationCosmosDB_olympics",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "CosmosDbMongoDbApi",
+		"typeProperties": {
+			"connectionString": "",
+			"database": "olympics",
+			"encryptedCredential": ""
+		}
+	}
+}

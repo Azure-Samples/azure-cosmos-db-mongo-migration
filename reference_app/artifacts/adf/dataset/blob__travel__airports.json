@@ -1,0 +1,19 @@
+{
+    "name": "blob__travel__airports",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "M2CMigrationBlobStorage",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "Json",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobStorageLocation",
+                "container": "travel-airports-adf",
+                "fileName": "*.json"
+            }
+        },
+        "schema": {}
+    }
+}

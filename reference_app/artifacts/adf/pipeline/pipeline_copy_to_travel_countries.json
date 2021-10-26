@@ -1,0 +1,65 @@
+
+{
+	"name": "pipeline_copy_to_travel_countries",
+	"properties": {
+		"activities": [
+			{
+				"name": "copy_blob__travel__countries",
+				"type": "Copy",
+				"dependsOn": [ 
+					
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "generated_at",
+						"value": "2021-10-26 19:28:58 UTC"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"wildcardFileName": "*.json",
+							"enablePartitionDiscovery": false
+						},					
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"sink": {
+						"type": "CosmosDbMongoDbApiSink",
+						"writeBatchTimeout": "01:00:00",
+						"writeBehavior": "upsert"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "blob__travel__countries",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "cosmos__travel__countries",
+						"type": "DatasetReference"
+					}
+				]
+			}
+			
+
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-05-21T21:01:43Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

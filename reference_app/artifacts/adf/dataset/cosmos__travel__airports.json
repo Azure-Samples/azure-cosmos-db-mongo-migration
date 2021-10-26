@@ -1,0 +1,17 @@
+{
+    "name": "cosmos__travel__airports",
+    "properties": {
+        "description": "target container",
+        "linkedServiceName": {
+            "referenceName": "M2CMigrationCosmosDB_travel",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "CosmosDbMongoDbApiCollection",
+        "schema": [],
+        "typeProperties": {
+            "collection": "airports"
+        }
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}
