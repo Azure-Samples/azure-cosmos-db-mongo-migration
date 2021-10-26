@@ -7,25 +7,23 @@
 This project framework provides the following features:
 
 - **MongoDB to CosmosDB Data Migration**
-- **Seven migration approaches are supported** by this project
-  - mongoexport, wrangling/transformation, Azure Blob Storage, load CosmosDB with Azure Data Factory
-  - mongoexport, wrangling/transformation, Azure Blob Storage, load CosmosDB with mongoimport
-  - mongoexport, wrangling/transformation, Azure Blob Storage, load CosmosDB with DotNet Client program
-  - mongoexport, wrangling/transformation, load CosmosDB with mongoimport
-  - mongoexport, wrangling/transformation, load CosmosDB with DotNet Client program
-  - mongoexport, no transformation, load CosmosDB with mongoimport
-  - mongoexport, no transformation, load CosmosDB with DotNet Client program
+- **Several migration approaches are supported** by this project, including:
+  - mongoexport from source database is used in all cases
+  - optional verbatim migrations
+  - optional mongoexport document wrangling/transformation
+  - optional target database schema/collection refactoring
+  - optional analysis of mongoexport files for candidate CosmosDB partition-keys
+  - load CosmosDB with mongoimport, a Dotnet client program, or Azure Data Factory (ADF)
 
 - **The Process uses metadata-driven code generation to generate executable artifacts**
   - shell scripts
   - configuration files
   - Azure Data Factory JSON code files
-- A **User-edited mapping file which maps source to target databases**; this can be generated
-- The **intent is to have zero human edits of the generated code/artifacts**
-- The intent is to support migrating dozens/hundreds of databases and thousands of collections
-- The **mongoexport** utility is used to extract data from the source database/containers
-- The Process supports optionally transforming your collection/container design
-- The Process supports data transformation from source to target database
+- A **User-edited mapping file which maps source to target databases**
+  - this mapping file can itself be generated
+- The **intent is to have a highly automated migration process**
+  - support migrating dozens/hundreds of databases, and thousands of collections
+  - zero human edits of the generated code/artifacts are necessary
 
 ## Getting Started
 
