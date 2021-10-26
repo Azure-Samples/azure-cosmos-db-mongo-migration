@@ -4,7 +4,7 @@
 # $ sudo ./pyenv_install_part1.sh
 #
 # see https://www.liquidweb.com/kb/how-to-install-pyenv-on-ubuntu-18-04/
-# Chris Joakim, Microsoft, July 2021
+# Chris Joakim, Microsoft, October 2021
 
 apt update -y
 

@@ -2,7 +2,7 @@
 
 # Bash shell that defines parameters and environment variables used in
 # this app, and is "sourced" by the other scripts in this directory.
-# Chris Joakim, Microsoft, August 2021
+# Chris Joakim, Microsoft, October 2021
 
 # environment variables for provisioning:
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # see https://www.liquidweb.com/kb/how-to-install-pyenv-on-ubuntu-18-04/
-# Chris Joakim, Microsoft, July 2021
+# Chris Joakim, Microsoft, October 2021
 
 cd ~
 rm -rf .pyenv

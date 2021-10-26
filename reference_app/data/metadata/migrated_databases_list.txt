@@ -1,0 +1,4 @@
+# Edit this file to the the list of your databases at M2C_SOURCE_MONGODB; see env.sh
+
+olympics
+openflights

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Setup this VM for using git.
+# Chris Joakim, Microsoft, October 2021
 
 cd ~
 

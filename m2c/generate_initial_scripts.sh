@@ -3,7 +3,7 @@
 # Bash script to generate the initial scripts to enable the fetching
 # of source-database metadata.  Uses the list of databases in simple
 # text file 'migrated_databases_list.txt'
-# Chris Joakim, Microsoft, July 2021
+# Chris Joakim, Microsoft, October 2021
 
 source env.sh
 

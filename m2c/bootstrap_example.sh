@@ -2,7 +2,7 @@
 
 # Bash script to demonstrate, in one script, the process to
 # extract metadata, create mappings, and generate artifacts.
-# Chris Joakim, Microsoft, July 2021
+# Chris Joakim, Microsoft, October 2021
 
 source env.sh
 

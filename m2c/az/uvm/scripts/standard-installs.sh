@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Bash script to install the software necessary for the migration process.
-# Chris Joakim, Microsoft, July 2021
+# Chris Joakim, Microsoft, October 2021
 
 echo '=== install the az cli'
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Bash script to explore the installed software and its versions.
-# Chris Joakim, Microsoft, July 2021
+# Chris Joakim, Microsoft, October 2021
 
 echo '=== git:'
 which git

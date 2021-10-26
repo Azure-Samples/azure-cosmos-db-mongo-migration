@@ -1,7 +1,7 @@
 __author__  = 'Chris Joakim'
 __email__   = "chjoakim@microsoft.com"
 __license__ = "MIT"
-__version__ = "July 2021"
+__version__ = "October 2021"
 
 import arrow
 import os
@@ -239,4 +239,4 @@ def test_boolean_env_var():
 
 def test_authored_year_month():
     config = Config()
-    assert(config.authored_year_month() == 'July 2021')
+    assert(config.authored_year_month() == 'October 2021')

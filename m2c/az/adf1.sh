@@ -2,7 +2,7 @@
 
 # Bash script with AZ CLI to automate the creation of an
 # Azure Data Factory account.
-# Chris Joakim, Microsoft, July 2021
+# Chris Joakim, Microsoft, October 2021
 
 source ./azconfig.sh
 

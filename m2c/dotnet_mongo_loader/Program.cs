@@ -7,7 +7,7 @@ using Newtonsoft.Json.Linq;
 // C# and net5.0 program to load a target Mongo database (including Cosmos/Mongo)
 // from a given file in mongoexport/mongoimport format.
 //
-// Chris Joakim, Microsoft, July 2021
+// Chris Joakim, Microsoft, October 2021
 // See https://mongodb.github.io/mongo-csharp-driver/2.12/getting_started/quick_tour/
 
 namespace dotnet_mongo_loader {

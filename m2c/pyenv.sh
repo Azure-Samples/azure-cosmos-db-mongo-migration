@@ -2,7 +2,7 @@
 
 # Bash script to create, populate, and activate the python virtual environment
 # for this project with pyenv.
-# Chris Joakim, Microsoft, July 2021
+# Chris Joakim, Microsoft, October 2021
 
 # These are the only two values that need to change between projects:
 venv_name="m2c"

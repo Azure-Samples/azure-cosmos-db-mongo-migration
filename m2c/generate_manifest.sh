@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Bash script to generate the "manifest" csv/Excel file.
-# Chris Joakim, Microsoft, July 2021
+# Chris Joakim, Microsoft, October 2021
 
 source env.sh
 

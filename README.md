@@ -1,5 +1,7 @@
 # azure-cosmos-db-mongo-migration
 
+## NOTE: THIS REPO IS CURRENTLY BEING MIGRATED TO
+
 <p align="center"><img src="docs/img/architecture.png" width="99%"></p>
 
 ## Features

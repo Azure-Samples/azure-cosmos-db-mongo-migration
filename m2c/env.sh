@@ -4,25 +4,16 @@
 # it is 'sourced' by other scripts in this repo.
 # Chris Joakim, Microsoft, October 2021
 
-# These next three directory locations currently point to where the 
-# generated artifacts and data are written to; they should be external
-# to this GitHub repo.
-
-if [[ $HOME == "/home/cjoakim" ]];
-then
-    #echo "we're on a linux vm"
-    export M2C_APP_DIR="/home/cjoakim/azure-m2c-wgm-reference-app/reference_app"
-else
-    #echo "we're on a mac"
-    export M2C_APP_DIR=$M2C_REF_APP_DIR  # <-- M2C_REF_APP_DIR already present on workstation
-fi
-
-export M2C_APP_ARTIFACTS="--simple-noblob"
-# options:
+# M2C_APP_ARTIFACTS defines which artifacts to generate based on the migration strategy; options:
 # --all
 # --simple-noblob
 # --simple-verbatim
 # --simple-noblob-verbatim
+export M2C_APP_ARTIFACTS="--all"
+
+
+# M2C_APP_DIR defines the root directory where the generated artifacts are written to.
+export M2C_APP_DIR="/Users/cjoakim/github/azure-cosmos-db-mongo-migration/reference_app"
 
 export M2C_APP_ARTIFACTS_DIR=$M2C_APP_DIR"/artifacts"
 export M2C_APP_DATA_DIR=$M2C_APP_DIR"/data"
@@ -31,6 +22,7 @@ export M2C_APP_DATA_DIR=$M2C_APP_DIR"/data"
 export M2C_SHELL_TYPE="bash"
 
 # The Azure Service Principal used by az commands
+# Note how the exported environment variables can be set from others, like $AZURE_M2C_SP_APP_ID
 export M2C_SP_APP_ID=$AZURE_M2C_SP_APP_ID
 export M2C_SP_DISPLAY_NAME=$AZURE_M2C_SP_DISPLAY_NAME
 export M2C_SP_NAME=$AZURE_M2C_SP_NAME
@@ -53,9 +45,6 @@ export M2C_SOURCE_MONGODB_HOST="localhost"
 export M2C_SOURCE_MONGODB_PORT="27017"
 export M2C_SOURCE_MONGODB_USER="root"
 export M2C_SOURCE_MONGODB_PASS="rootpassword"
-# The above localhost:27017 with root/rootpassword point to the MongoDB
-# instance running locally in a Docker container, with the reference databases.
-# See companion repo https://github.com/cjoakim/mongodb-docker
 
 # Resource Group and Azure Data Factory for the Migration
 export M2C_RG=$AZURE_M2C_RG

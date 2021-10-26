@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Bash script with AZ CLI to automate the creation an Ubuntu Virtual Machine (UVM).
-# Chris Joakim, Microsoft, July 2021
+# Chris Joakim, Microsoft, October 2021
 
 source ./azconfig.sh
 
