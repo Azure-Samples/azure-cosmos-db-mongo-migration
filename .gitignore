@@ -1,3 +1,31 @@
+## cj
+
+**/.DS_Store
+**/.factorypath
+**/.idea/
+**/*.iml
+**/*.class
+**/*.swp
+
+**/.classpath
+**/.project
+**/.settings/
+**/.vs/
+
+**/bin/
+**/obj/
+**/out/
+**/node_modules/
+**/tmp/
+**/target/
+
+reference_app/data/imdb/*.json
+
+**/lib64
+**/pyvenv.cfg
+**/share/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
