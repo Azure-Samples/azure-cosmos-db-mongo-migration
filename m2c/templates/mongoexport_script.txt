@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Bash shell script to export each source collection via mongoexport.
+#
+# Database Name: {{ dbname }}
+# Generated on:  {{ gen_timestamp }}
+# Template:      mongoexport_script.txt
+
+source env.sh
+
+mkdir -p data/source/mongoexports
+
+{% for c in collections %}
+echo ''
+echo 'mongoexporting - database: {{ dbname }} container: {{ c['name'] }}'
+mongoexport --authenticationDatabase admin -u $M2C_SOURCE_MONGODB_USER -p $M2C_SOURCE_MONGODB_PASS --uri {{ uri }} \
+    --db {{ dbname }} \
+    --collection {{ c['name'] }} \
+    --out {{ outdir }}/{{ dbname }}__{{ c['name'] }}.json
+    {{ ssl }}
+{% endfor %}
+
+echo 'done'

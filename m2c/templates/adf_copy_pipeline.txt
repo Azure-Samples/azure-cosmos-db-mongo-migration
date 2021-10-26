@@ -1,0 +1,71 @@
+
+{
+	"name": "{{ pipeline_name }}",
+	"properties": {
+		"activities": [
+			{% for activity in activities -%}
+			{
+				"name": "{{ activity['name'] }}",
+				"type": "Copy",
+				"dependsOn": [ 
+					{% if activity['has_dependency'] -%}
+					{
+						"activity": "{{ activity['dependent_activity'] }}",
+						"dependencyConditions": [ "Succeeded" ]
+					}
+					{% endif %}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "generated_at",
+						"value": "{{ gen_timestamp }}"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"wildcardFileName": "*.json",
+							"enablePartitionDiscovery": false
+						},					
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"sink": {
+						"type": "CosmosDbMongoDbApiSink",
+						"writeBatchTimeout": "01:00:00",
+						"writeBehavior": "upsert"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "{{ activity['input_dataset'] }}",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "{{ activity['output_dataset'] }}",
+						"type": "DatasetReference"
+					}
+				]
+			}{{ activity['activity_sep'] }}
+			{% endfor %}
+
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-05-21T21:01:43Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

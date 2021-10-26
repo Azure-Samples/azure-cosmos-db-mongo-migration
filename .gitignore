@@ -15,7 +15,7 @@
 **/bin/
 **/obj/
 **/out/
-**/node_modules/
+**/htmlcov/
 **/tmp/
 **/target/
 

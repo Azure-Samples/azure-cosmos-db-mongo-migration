@@ -1,0 +1,19 @@
+{
+    "name": "{{ dataset_name }}",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "M2CMigrationBlobStorage",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "Json",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobStorageLocation",
+                "container": "{{ blob_container }}",
+                "fileName": "*.json"
+            }
+        },
+        "schema": {}
+    }
+}

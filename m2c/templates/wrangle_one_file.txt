@@ -1,0 +1,69 @@
+#!/bin/bash
+
+# Bash shell script to transform a mongoexport file then import
+# the transformed file to CosmosDB.
+#
+# Database Name: {{ dbname }}
+# Generated on:  {{ gen_timestamp }}
+# Template:      wrangle_one_file.txt
+
+source ./env.sh
+
+mkdir -p tmp/{{ dbname }}/out
+mkdir -p out/{{ dbname }}
+
+python wrangle.py transform_file \
+    --db {{ dbname }} \
+    --source-coll  {{ source_coll }} \
+    --infile   {{ infile }} \
+    --outfile  {{ wrangled_outfile }}
+
+echo ''
+echo 'first line of input file: {{ infile }}'
+head -1 {{ infile }}
+
+echo ''
+echo 'first line of output file: {{ wrangled_outfile }}'
+head -1 {{ wrangled_outfile }}
+
+if [[ $M2C_COSMOS_LOAD_METHOD == "mongoimport" ]];
+then
+    echo ''
+    echo 'executing mongoimport to db: {{ target_db }} coll: {{ target_coll }} ...' 
+
+    mongoimport \
+        --uri $M2C_COSMOS_MONGO_CONN_STRING \
+        --db {{ target_db }} \
+        --collection {{ target_coll }} \
+        --file {{ wrangled_outfile }} \
+        --numInsertionWorkers $M2C_MONGOIMPORT_NWORKERS \
+        --batchSize $M2C_MONGOIMPORT_BATCH_SIZE \
+        --mode $M2C_MONGOIMPORT_MODE \
+        --writeConcern "{w:0}" \
+        --ssl
+
+    echo 'mongoimport completed' 
+fi 
+
+if [[ $M2C_COSMOS_LOAD_METHOD == "dotnet_mongo_loader" ]];
+then
+    echo ''
+    echo 'executing dotnet_mongo_loader to db: {{ target_db }} coll: {{ target_coll }} ...' 
+
+    dotnet run --project dotnet_mongo_loader/dotnet_mongo_loader.csproj \
+        {{ target_db }} {{ target_coll }} {{ wrangled_outfile }} \
+        $M2C_DOTNETMONGOLOADER_TARGET $M2C_DOTNETMONGOLOADER_LOAD_IND \
+        $M2C_DOTNETMONGOLOADER_DOCUMENT_ID_POLICY \
+        --tracerInterval $M2C_DOTNETMONGOLOADER_TRACER_INTERVAL \
+        --rowMaxRetries $M2C_DOTNETMONGOLOADER_ROW_MAX_RETRIES \
+        $M2C_DOTNETMONGOLOADER_VERBOSE
+fi
+
+if [[ $M2C_WRANGLING_CLEANUP == "cleanup" ]];
+then
+    echo ''
+    echo 'deleting the mongoexport file to save disk space...'
+    rm {{ infile }}
+fi
+
+echo 'done'

@@ -1,0 +1,20 @@
+{
+    "name": "{{ dataset_name }}",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "{{ blob_linked_svc }}",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "Json",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobStorageLocation",
+                "fileName": "{{ blob_name }}",
+                "container": "{{ blob_container }}"
+            }
+        },
+        "schema": {}
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,13 @@
+{
+    "name": "{{ credential }}",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "CosmosDbMongoDbApi",
+        "typeProperties": {
+            "connectionString": "{{ conn_str }}",
+            "database": "{{ database }}",
+            "encryptedCredential": "{{ credential }}"
+        }
+    }
+}
