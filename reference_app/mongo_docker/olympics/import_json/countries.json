@@ -1,0 +1,230 @@
+{"NOC":"AFG","region":"Afghanistan","notes":""}
+{"NOC":"AHO","region":"Curacao","notes":"Netherlands Antilles"}
+{"NOC":"ALB","region":"Albania","notes":""}
+{"NOC":"ALG","region":"Algeria","notes":""}
+{"NOC":"AND","region":"Andorra","notes":""}
+{"NOC":"ANG","region":"Angola","notes":""}
+{"NOC":"ANT","region":"Antigua","notes":"Antigua and Barbuda"}
+{"NOC":"ANZ","region":"Australia","notes":"Australasia"}
+{"NOC":"ARG","region":"Argentina","notes":""}
+{"NOC":"ARM","region":"Armenia","notes":""}
+{"NOC":"ARU","region":"Aruba","notes":""}
+{"NOC":"ASA","region":"American Samoa","notes":""}
+{"NOC":"AUS","region":"Australia","notes":""}
+{"NOC":"AUT","region":"Austria","notes":""}
+{"NOC":"AZE","region":"Azerbaijan","notes":""}
+{"NOC":"BAH","region":"Bahamas","notes":""}
+{"NOC":"BAN","region":"Bangladesh","notes":""}
+{"NOC":"BAR","region":"Barbados","notes":""}
+{"NOC":"BDI","region":"Burundi","notes":""}
+{"NOC":"BEL","region":"Belgium","notes":""}
+{"NOC":"BEN","region":"Benin","notes":""}
+{"NOC":"BER","region":"Bermuda","notes":""}
+{"NOC":"BHU","region":"Bhutan","notes":""}
+{"NOC":"BIH","region":"Bosnia and Herzegovina","notes":""}
+{"NOC":"BIZ","region":"Belize","notes":""}
+{"NOC":"BLR","region":"Belarus","notes":""}
+{"NOC":"BOH","region":"Czech Republic","notes":"Bohemia"}
+{"NOC":"BOL","region":"Boliva","notes":""}
+{"NOC":"BOT","region":"Botswana","notes":""}
+{"NOC":"BRA","region":"Brazil","notes":""}
+{"NOC":"BRN","region":"Bahrain","notes":""}
+{"NOC":"BRU","region":"Brunei","notes":""}
+{"NOC":"BUL","region":"Bulgaria","notes":""}
+{"NOC":"BUR","region":"Burkina Faso","notes":""}
+{"NOC":"CAF","region":"Central African Republic","notes":""}
+{"NOC":"CAM","region":"Cambodia","notes":""}
+{"NOC":"CAN","region":"Canada","notes":""}
+{"NOC":"CAY","region":"Cayman Islands","notes":""}
+{"NOC":"CGO","region":"Republic of Congo","notes":""}
+{"NOC":"CHA","region":"Chad","notes":""}
+{"NOC":"CHI","region":"Chile","notes":""}
+{"NOC":"CHN","region":"China","notes":""}
+{"NOC":"CIV","region":"Ivory Coast","notes":""}
+{"NOC":"CMR","region":"Cameroon","notes":""}
+{"NOC":"COD","region":"Democratic Republic of the Congo","notes":""}
+{"NOC":"COK","region":"Cook Islands","notes":""}
+{"NOC":"COL","region":"Colombia","notes":""}
+{"NOC":"COM","region":"Comoros","notes":""}
+{"NOC":"CPV","region":"Cape Verde","notes":""}
+{"NOC":"CRC","region":"Costa Rica","notes":""}
+{"NOC":"CRO","region":"Croatia","notes":""}
+{"NOC":"CRT","region":"Greece","notes":"Crete"}
+{"NOC":"CUB","region":"Cuba","notes":""}
+{"NOC":"CYP","region":"Cyprus","notes":""}
+{"NOC":"CZE","region":"Czech Republic","notes":""}
+{"NOC":"DEN","region":"Denmark","notes":""}
+{"NOC":"DJI","region":"Djibouti","notes":""}
+{"NOC":"DMA","region":"Dominica","notes":""}
+{"NOC":"DOM","region":"Dominican Republic","notes":""}
+{"NOC":"ECU","region":"Ecuador","notes":""}
+{"NOC":"EGY","region":"Egypt","notes":""}
+{"NOC":"ERI","region":"Eritrea","notes":""}
+{"NOC":"ESA","region":"El Salvador","notes":""}
+{"NOC":"ESP","region":"Spain","notes":""}
+{"NOC":"EST","region":"Estonia","notes":""}
+{"NOC":"ETH","region":"Ethiopia","notes":""}
+{"NOC":"EUN","region":"Russia","notes":""}
+{"NOC":"FIJ","region":"Fiji","notes":""}
+{"NOC":"FIN","region":"Finland","notes":""}
+{"NOC":"FRA","region":"France","notes":""}
+{"NOC":"FRG","region":"Germany","notes":""}
+{"NOC":"FSM","region":"Micronesia","notes":""}
+{"NOC":"GAB","region":"Gabon","notes":""}
+{"NOC":"GAM","region":"Gambia","notes":""}
+{"NOC":"GBR","region":"UK","notes":""}
+{"NOC":"GBS","region":"Guinea-Bissau","notes":""}
+{"NOC":"GDR","region":"Germany","notes":""}
+{"NOC":"GEO","region":"Georgia","notes":""}
+{"NOC":"GEQ","region":"Equatorial Guinea","notes":""}
+{"NOC":"GER","region":"Germany","notes":""}
+{"NOC":"GHA","region":"Ghana","notes":""}
+{"NOC":"GRE","region":"Greece","notes":""}
+{"NOC":"GRN","region":"Grenada","notes":""}
+{"NOC":"GUA","region":"Guatemala","notes":""}
+{"NOC":"GUI","region":"Guinea","notes":""}
+{"NOC":"GUM","region":"Guam","notes":""}
+{"NOC":"GUY","region":"Guyana","notes":""}
+{"NOC":"HAI","region":"Haiti","notes":""}
+{"NOC":"HKG","region":"China","notes":"Hong Kong"}
+{"NOC":"HON","region":"Honduras","notes":""}
+{"NOC":"HUN","region":"Hungary","notes":""}
+{"NOC":"INA","region":"Indonesia","notes":""}
+{"NOC":"IND","region":"India","notes":""}
+{"NOC":"IOA","region":"Individual Olympic Athletes","notes":"Individual Olympic Athletes"}
+{"NOC":"IRI","region":"Iran","notes":""}
+{"NOC":"IRL","region":"Ireland","notes":""}
+{"NOC":"IRQ","region":"Iraq","notes":""}
+{"NOC":"ISL","region":"Iceland","notes":""}
+{"NOC":"ISR","region":"Israel","notes":""}
+{"NOC":"ISV","region":"Virgin Islands, US","notes":"Virgin Islands"}
+{"NOC":"ITA","region":"Italy","notes":""}
+{"NOC":"IVB","region":"Virgin Islands, British","notes":""}
+{"NOC":"JAM","region":"Jamaica","notes":""}
+{"NOC":"JOR","region":"Jordan","notes":""}
+{"NOC":"JPN","region":"Japan","notes":""}
+{"NOC":"KAZ","region":"Kazakhstan","notes":""}
+{"NOC":"KEN","region":"Kenya","notes":""}
+{"NOC":"KGZ","region":"Kyrgyzstan","notes":""}
+{"NOC":"KIR","region":"Kiribati","notes":""}
+{"NOC":"KOR","region":"South Korea","notes":""}
+{"NOC":"KOS","region":"Kosovo","notes":""}
+{"NOC":"KSA","region":"Saudi Arabia","notes":""}
+{"NOC":"KUW","region":"Kuwait","notes":""}
+{"NOC":"LAO","region":"Laos","notes":""}
+{"NOC":"LAT","region":"Latvia","notes":""}
+{"NOC":"LBA","region":"Libya","notes":""}
+{"NOC":"LBR","region":"Liberia","notes":""}
+{"NOC":"LCA","region":"Saint Lucia","notes":""}
+{"NOC":"LES","region":"Lesotho","notes":""}
+{"NOC":"LIB","region":"Lebanon","notes":""}
+{"NOC":"LIE","region":"Liechtenstein","notes":""}
+{"NOC":"LTU","region":"Lithuania","notes":""}
+{"NOC":"LUX","region":"Luxembourg","notes":""}
+{"NOC":"MAD","region":"Madagascar","notes":""}
+{"NOC":"MAL","region":"Malaysia","notes":""}
+{"NOC":"MAR","region":"Morocco","notes":""}
+{"NOC":"MAS","region":"Malaysia","notes":""}
+{"NOC":"MAW","region":"Malawi","notes":""}
+{"NOC":"MDA","region":"Moldova","notes":""}
+{"NOC":"MDV","region":"Maldives","notes":""}
+{"NOC":"MEX","region":"Mexico","notes":""}
+{"NOC":"MGL","region":"Mongolia","notes":""}
+{"NOC":"MHL","region":"Marshall Islands","notes":""}
+{"NOC":"MKD","region":"Macedonia","notes":""}
+{"NOC":"MLI","region":"Mali","notes":""}
+{"NOC":"MLT","region":"Malta","notes":""}
+{"NOC":"MNE","region":"Montenegro","notes":""}
+{"NOC":"MON","region":"Monaco","notes":""}
+{"NOC":"MOZ","region":"Mozambique","notes":""}
+{"NOC":"MRI","region":"Mauritius","notes":""}
+{"NOC":"MTN","region":"Mauritania","notes":""}
+{"NOC":"MYA","region":"Myanmar","notes":""}
+{"NOC":"NAM","region":"Namibia","notes":""}
+{"NOC":"NBO","region":"Malaysia","notes":"North Borneo"}
+{"NOC":"NCA","region":"Nicaragua","notes":""}
+{"NOC":"NED","region":"Netherlands","notes":""}
+{"NOC":"NEP","region":"Nepal","notes":""}
+{"NOC":"NFL","region":"Canada","notes":"Newfoundland"}
+{"NOC":"NGR","region":"Nigeria","notes":""}
+{"NOC":"NIG","region":"Niger","notes":""}
+{"NOC":"NOR","region":"Norway","notes":""}
+{"NOC":"NRU","region":"Nauru","notes":""}
+{"NOC":"NZL","region":"New Zealand","notes":""}
+{"NOC":"OMA","region":"Oman","notes":""}
+{"NOC":"PAK","region":"Pakistan","notes":""}
+{"NOC":"PAN","region":"Panama","notes":""}
+{"NOC":"PAR","region":"Paraguay","notes":""}
+{"NOC":"PER","region":"Peru","notes":""}
+{"NOC":"PHI","region":"Philippines","notes":""}
+{"NOC":"PLE","region":"Palestine","notes":""}
+{"NOC":"PLW","region":"Palau","notes":""}
+{"NOC":"PNG","region":"Papua New Guinea","notes":""}
+{"NOC":"POL","region":"Poland","notes":""}
+{"NOC":"POR","region":"Portugal","notes":""}
+{"NOC":"PRK","region":"North Korea","notes":""}
+{"NOC":"PUR","region":"Puerto Rico","notes":""}
+{"NOC":"QAT","region":"Qatar","notes":""}
+{"NOC":"RHO","region":"Zimbabwe","notes":""}
+{"NOC":"ROT","region":"NA","notes":"Refugee Olympic Team"}
+{"NOC":"ROU","region":"Romania","notes":""}
+{"NOC":"RSA","region":"South Africa","notes":""}
+{"NOC":"RUS","region":"Russia","notes":""}
+{"NOC":"RWA","region":"Rwanda","notes":""}
+{"NOC":"SAA","region":"Germany","notes":""}
+{"NOC":"SAM","region":"Samoa","notes":""}
+{"NOC":"SCG","region":"Serbia","notes":"Serbia and Montenegro"}
+{"NOC":"SEN","region":"Senegal","notes":""}
+{"NOC":"SEY","region":"Seychelles","notes":""}
+{"NOC":"SIN","region":"Singapore","notes":""}
+{"NOC":"SKN","region":"Saint Kitts","notes":"Turks and Caicos Islands"}
+{"NOC":"SLE","region":"Sierra Leone","notes":""}
+{"NOC":"SLO","region":"Slovenia","notes":""}
+{"NOC":"SMR","region":"San Marino","notes":""}
+{"NOC":"SOL","region":"Solomon Islands","notes":""}
+{"NOC":"SOM","region":"Somalia","notes":""}
+{"NOC":"SRB","region":"Serbia","notes":""}
+{"NOC":"SRI","region":"Sri Lanka","notes":""}
+{"NOC":"SSD","region":"South Sudan","notes":""}
+{"NOC":"STP","region":"Sao Tome and Principe","notes":""}
+{"NOC":"SUD","region":"Sudan","notes":""}
+{"NOC":"SUI","region":"Switzerland","notes":""}
+{"NOC":"SUR","region":"Suriname","notes":""}
+{"NOC":"SVK","region":"Slovakia","notes":""}
+{"NOC":"SWE","region":"Sweden","notes":""}
+{"NOC":"SWZ","region":"Swaziland","notes":""}
+{"NOC":"SYR","region":"Syria","notes":""}
+{"NOC":"TAN","region":"Tanzania","notes":""}
+{"NOC":"TCH","region":"Czech Republic","notes":""}
+{"NOC":"TGA","region":"Tonga","notes":""}
+{"NOC":"THA","region":"Thailand","notes":""}
+{"NOC":"TJK","region":"Tajikistan","notes":""}
+{"NOC":"TKM","region":"Turkmenistan","notes":""}
+{"NOC":"TLS","region":"Timor-Leste","notes":""}
+{"NOC":"TOG","region":"Togo","notes":""}
+{"NOC":"TPE","region":"Taiwan","notes":""}
+{"NOC":"TTO","region":"Trinidad","notes":"Trinidad and Tobago"}
+{"NOC":"TUN","region":"Tunisia","notes":""}
+{"NOC":"TUR","region":"Turkey","notes":""}
+{"NOC":"TUV","region":"NA","notes":"Tuvalu"}
+{"NOC":"UAE","region":"United Arab Emirates","notes":""}
+{"NOC":"UAR","region":"Syria","notes":"United Arab Republic"}
+{"NOC":"UGA","region":"Uganda","notes":""}
+{"NOC":"UKR","region":"Ukraine","notes":""}
+{"NOC":"UNK","region":"NA","notes":"Unknown"}
+{"NOC":"URS","region":"Russia","notes":""}
+{"NOC":"URU","region":"Uruguay","notes":""}
+{"NOC":"USA","region":"USA","notes":""}
+{"NOC":"UZB","region":"Uzbekistan","notes":""}
+{"NOC":"VAN","region":"Vanuatu","notes":""}
+{"NOC":"VEN","region":"Venezuela","notes":""}
+{"NOC":"VIE","region":"Vietnam","notes":""}
+{"NOC":"VIN","region":"Saint Vincent","notes":""}
+{"NOC":"VNM","region":"Vietnam","notes":""}
+{"NOC":"WIF","region":"Trinidad","notes":"West Indies Federation"}
+{"NOC":"YAR","region":"Yemen","notes":"North Yemen"}
+{"NOC":"YEM","region":"Yemen","notes":""}
+{"NOC":"YMD","region":"Yemen","notes":"South Yemen"}
+{"NOC":"YUG","region":"Serbia","notes":"Yugoslavia"}
+{"NOC":"ZAM","region":"Zambia","notes":""}
+{"NOC":"ZIM","region":"Zimbabwe","notes":""}
