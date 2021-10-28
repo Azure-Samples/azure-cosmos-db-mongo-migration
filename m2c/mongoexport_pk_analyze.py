@@ -5,7 +5,7 @@ Usage:
     ---
     source env.sh
     export infile=$M2C_APP_DATA_DIR/mongoexports/openflights/openflights__routes.json
-    python mongoexport_analyze.py pk_analysis $infile
+    python mongoexport_pk_analyze.py pk_analysis $infile
 """
 
 
