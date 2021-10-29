@@ -19,7 +19,8 @@
 **/tmp/
 **/target/
 
-reference_app/data/imdb/*.json
+reference_app/artifacts/adf/
+reference_app/artifacts/shell/
 
 **/lib64
 **/pyvenv.cfg

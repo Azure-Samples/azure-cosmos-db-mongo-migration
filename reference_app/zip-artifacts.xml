@@ -1,9 +1,14 @@
 <project name="backup" default="zip" basedir=".">
 
     <description>
-        Ant script to create a zip file containing a set of generated
-        artifacts, so that the one zip file can be stored in Git rather
-        than the many individual files which can now be git-ignored.
+        Ant script to create a zip file containing the set of sample generated
+        artifacts, so that the one zip file can be stored in Git rather than
+        the many individual files.  git-ignoring these generated files produces
+        less clutter.
+
+        Simply unzip the "sample_generated_artifacts.zip" file to see the generated
+        sample artifacts. 
+
         Chris Joakim, Microsoft, October 2021
         ant -f zip-artifacts.xml
     </description>
