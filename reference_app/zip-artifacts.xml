@@ -1,0 +1,33 @@
+<project name="backup" default="zip" basedir=".">
+
+    <description>
+        Ant script to create a zip file containing a set of generated
+        artifacts, so that the one zip file can be stored in Git rather
+        than the many individual files which can now be git-ignored.
+        Chris Joakim, Microsoft, October 2021
+        ant -f zip-artifacts.xml
+    </description>
+
+    <target name="zip" >
+        <description>
+            Create the artifacts zip file.
+        </description>
+
+        <property name="_zipFilename" value="artifacts/sample_generated_artifacts.zip" />
+        <delete file="${_zipFilename}" />
+
+        <zip zipfile="${_zipFilename}"
+             basedir="artifacts"
+             excludes=" 
+                **/.DS_Store,
+                **/obj/,
+                **/bin/,
+                **/*.pyc,
+                **/__pycache__/,
+                **/tmp/" />
+
+        <echo message="file created: ${_zipFilename}" />
+        <echo message="done." />
+    </target>
+
+</project>
