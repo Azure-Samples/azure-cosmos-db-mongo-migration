@@ -12,12 +12,20 @@ mkdir -p data/source/mongoexports
 
 {% for c in collections %}
 echo ''
-echo 'mongoexporting - database: {{ dbname }} container: {{ c['name'] }}'
+echo 'mongoexport:  database: {{ dbname }} container: {{ c['name'] }}'
+echo '    to file:  {{ outdir }}/{{ dbname }}__{{ c['name'] }}.json'
+
+{% if atlas == 'no' -%}
 mongoexport --authenticationDatabase admin -u $M2C_SOURCE_MONGODB_USER -p $M2C_SOURCE_MONGODB_PASS --uri {{ uri }} \
     --db {{ dbname }} \
     --collection {{ c['name'] }} \
     --out {{ outdir }}/{{ dbname }}__{{ c['name'] }}.json
     {{ ssl }}
+{% else -%}
+mongoexport \
+    --uri $M2C_SOURCE_MONGODB_ATLAS_CONN_STR/{{ dbname }} \
+    --collection {{ c['name'] }} \
+    --out {{ outdir }}/{{ dbname }}__{{ c['name'] }}.json
+{% endif %}
 {% endfor %}
-
 echo 'done'

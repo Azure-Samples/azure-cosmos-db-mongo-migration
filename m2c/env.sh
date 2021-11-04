@@ -45,7 +45,9 @@ export M2C_SOURCE_MONGODB_HOST="localhost"
 export M2C_SOURCE_MONGODB_PORT="27017"
 export M2C_SOURCE_MONGODB_USER="root"
 export M2C_SOURCE_MONGODB_PASS="rootpassword"
-#export M2C_SOURCE_MONGODB_ATLAS_CONN_STR="mongodb+srv://cjoakim:pppppppp@cluster0.xxxxx.azure.mongodb.net"
+export M2C_SOURCE_MONGODB_ATLAS_CONN_STR=$AZURE_ATLAS_CONN_STR
+# Atlas connection string looks like this:
+# "mongodb+srv://username:password@cluster0.xxxxx.azure.mongodb.net"
 
 # Resource Group and Azure Data Factory for the Migration
 export M2C_RG=$AZURE_M2C_RG

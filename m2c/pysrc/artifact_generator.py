@@ -1,7 +1,7 @@
 __author__  = 'Chris Joakim'
 __email__   = "chjoakim@microsoft.com"
 __license__ = "MIT"
-__version__ = "October 2021"
+__version__ = "November 2021"
 
 import json
 import os
@@ -162,6 +162,10 @@ class ArtifactGenerator(object):
         template_data['ssl']  = ' # no --ssl' # self.config.source_mongodb_ssl 
         template_data['collections'] = self.collections
         template_data['outdir'] = self.mongoexports_dir
+        if self.config.is_atlas():
+            template_data['atlas'] = 'yes'
+        else:
+            template_data['atlas'] = 'no'
         self.render_template(template_name, template_data, outfile)
 
     def gen_python_create_containers(self):
