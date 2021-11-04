@@ -1,4 +1,3 @@
 # Edit this file to the the list of your databases to migrate at M2C_SOURCE_MONGODB_xxx; see env.sh
 
-olympics
-openflights
+sample_airbnb

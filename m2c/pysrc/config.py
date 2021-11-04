@@ -1,7 +1,7 @@
 __author__  = 'Chris Joakim'
 __email__   = "chjoakim@microsoft.com"
 __license__ = "MIT"
-__version__ = "October 2021"
+__version__ = "November 2021"
 
 import arrow
 import glob
@@ -30,20 +30,30 @@ class Config(object):
         self.source_mongodb_user = self.env_var('M2C_SOURCE_MONGODB_USER', 'root')
         self.source_mongodb_pass = self.env_var('M2C_SOURCE_MONGODB_PASS', 'rootpassword')
         self.source_mongodb_ssl  = self.boolean_env_var('M2C_SOURCE_MONGODB_SSL',  False)
-
+        self.source_mongodb_atlas = self.boolean_env_var('M2C_SOURCE_MONGODB_ATLAS',  False)
     def source_mongodb_uri(self):
         return 'mongodb://@{}:{}'.format(
             self.source_mongodb_host, self.source_mongodb_port)
 
+    def is_atlas(self):
+        atlas_conn_str = self.env_var('M2C_SOURCE_MONGODB_ATLAS_CONN_STR', '')
+        return len(atlas_conn_str) > 10
+
     def source_pymongo_conn_string(self, dbname):
-        # https://docs.mongodb.com/manual/reference/connection-string/
-        # mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
-        return 'mongodb://{}:{}@{}:{}/{}'.format(
-            self.source_mongodb_user,
-            self.source_mongodb_pass,
-            self.source_mongodb_host,
-            self.source_mongodb_port,
-            dbname)
+
+        atlas_conn_str = self.env_var('M2C_SOURCE_MONGODB_ATLAS_CONN_STR', '')
+        if len(atlas_conn_str) > 10:
+            # looks like -> mongodb+srv://cjoakim:password@cluster0.xxxxx.azure.mongodb.net
+            return atlas_conn_str
+        else:
+            # looks like -> mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
+            # see https://docs.mongodb.com/manual/reference/connection-string/
+            return 'mongodb://{}:{}@{}:{}/{}'.format(
+                self.source_mongodb_user,
+                self.source_mongodb_pass,
+                self.source_mongodb_host,
+                self.source_mongodb_port,
+                dbname)
 
     def metadata_dir(self):
         return '{}/metadata'.format(self.data_dir)

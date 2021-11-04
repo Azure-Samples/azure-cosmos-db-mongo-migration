@@ -2,7 +2,7 @@
 
 # This script defines environment variables used in this migration process;
 # it is 'sourced' by other scripts in this repo.
-# Chris Joakim, Microsoft, October 2021
+# Chris Joakim, Microsoft, November 2021
 
 # M2C_APP_ARTIFACTS defines which artifacts to generate based on the migration strategy; options:
 # --all
@@ -45,6 +45,8 @@ export M2C_SOURCE_MONGODB_HOST="localhost"
 export M2C_SOURCE_MONGODB_PORT="27017"
 export M2C_SOURCE_MONGODB_USER="root"
 export M2C_SOURCE_MONGODB_PASS="rootpassword"
+#export M2C_SOURCE_MONGODB_ATLAS_CONN_STR="mongodb+srv://cjoakim:pppppppp@cluster0.xxxxx.azure.mongodb.net"
+
 
 # Resource Group and Azure Data Factory for the Migration
 export M2C_RG=$AZURE_M2C_RG

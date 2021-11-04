@@ -26,6 +26,8 @@ cryptography==3.4.7
     # via azure-storage-blob
 cycler==0.10.0
     # via matplotlib
+dnspython==2.1.0
+    # via -r requirements.in
 docopt==0.6.2
     # via -r requirements.in
 idna==2.10

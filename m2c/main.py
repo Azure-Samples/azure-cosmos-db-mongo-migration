@@ -14,7 +14,7 @@ Usage:
 __author__  = 'Chris Joakim'
 __email__   = "chjoakim@microsoft.com"
 __license__ = "MIT"
-__version__ = "October 2021"
+__version__ = "November 2021"
 
 import json
 import os
@@ -61,27 +61,44 @@ def extract_db_metadata(login_db, dbname):
     print('db: {}'.format(db))
 
     coll_names = db.list_collection_names()  # api for newer versions of mongo
-    #coll_names = db.collection_names()        # deprecated in version 3.7.0
+    #coll_names = db.collection_names()      # deprecated in version 3.7.0
 
     db_metadata = dict()
     db_metadata['dbname'] = dbname
     db_metadata['utc_datetime'] = str(arrow.utcnow())
     db_metadata['collections'] = list() 
 
+    print('coll_names: {}'.format(coll_names))
+
     for coll_name in coll_names:
         coll_obj = db[coll_name]
         coll_info = dict()
         coll_meta = dict()
         coll_info['name'] = coll_name 
-        coll_info['metadata'] = coll_meta
-        coll_meta['doc_count'] = coll_obj.count_documents({})
         coll_meta['indexes'] = list()
+        coll_info['metadata'] = coll_meta
 
-        for index in coll_obj.list_indexes():
-            coll_meta['indexes'].append(index)
-        cmd = { 'collStats' : coll_name, 'verbose' : False }
-        stats = db.command(cmd)
-        coll_meta['stats'] = prune_coll_stats(stats)
+        try:
+            coll_meta['doc_count'] = coll_obj.count_documents({})
+        except:
+            pass
+
+        try:
+            for index in coll_obj.list_indexes():
+                coll_meta['indexes'].append(index)
+        except:
+            pass
+    
+        if config.is_atlas():
+            pass  # TypeError: Object of type Timestamp is not JSON serializable
+        else:
+            try:
+                cmd = { 'collStats' : coll_name, 'verbose' : False }
+                stats = db.command(cmd)
+                coll_meta['stats'] = prune_coll_stats(stats)
+            except:
+                pass
+
         db_metadata['collections'].append(coll_info)
 
     db_metadata['dbstats'] = db.command('dbstats')
