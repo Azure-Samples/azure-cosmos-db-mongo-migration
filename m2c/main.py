@@ -121,7 +121,9 @@ def generate_mapping_file(dbname):
 def generate_artifacts(dbname):
     print('generate_artifacts {} {}'.format(dbname, sys.argv))
     infile = config.db_mapping_file(dbname)
+    print('generate_artifacts, infile: {}'.format(infile))
     mapping_data = load_json_file(infile)
+    print('generate_artifacts, mapping_data: {}'.format(mapping_data))
     generator = ArtifactGenerator(dbname, mapping_data)
     generator.generate()
 
