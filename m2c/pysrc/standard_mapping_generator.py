@@ -1,7 +1,7 @@
 __author__  = 'Chris Joakim'
 __email__   = "chjoakim@microsoft.com"
 __license__ = "MIT"
-__version__ = "October 2021"
+__version__ = "November 2021"
 
 import glob
 import json
@@ -30,14 +30,15 @@ class StandardMappingGenerator(object):
         data = dict()
         data['source_dbname'] = self.dbname
         data['default_target_dbname'] = self.dbname
-        
+        data['cosmos_db_autoscale_ru'] = 10000  # default unless overridden below
+
         if self.dbname == 'olympics':
             data['default_target_dbname'] = 'olympics'
-            data['cosmos_db_autoscale_ru'] = 10000
+            data['cosmos_db_autoscale_ru'] = 7000
 
         elif self.dbname == 'openflights':
             data['default_target_dbname'] = 'travel'
-            data['cosmos_db_autoscale_ru'] = 5000
+            data['cosmos_db_autoscale_ru'] = 4000
 
         coll_data = list()
 
