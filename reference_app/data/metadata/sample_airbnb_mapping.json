@@ -1,0 +1,23 @@
+{
+  "source_dbname": "sample_airbnb",
+  "default_target_dbname": "sample_airbnb",
+  "cosmos_db_autoscale_ru": 10000,
+  "collections": [
+    {
+      "name": "listingsAndReviews",
+      "mapping": {
+        "target_dbname": "sample_airbnb",
+        "target_container": "listingsAndReviews",
+        "wrangling_algorithm": "standard",
+        "pk_name": "pk",
+        "pk_logic": [],
+        "pk_sep": "-",
+        "doctype_name": "doctype",
+        "doctype_logic": [],
+        "doctype_sep": "-",
+        "additions": [],
+        "excludes": []
+      }
+    }
+  ]
+}
