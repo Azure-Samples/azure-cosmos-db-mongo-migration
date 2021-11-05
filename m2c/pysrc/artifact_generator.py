@@ -278,13 +278,11 @@ class ArtifactGenerator(object):
                 self.shell_artifacts_dir, wrangle_script_name)
             redirect = 'out/{}/wrangle_{}.out'.format(self.dbname, wrangle_script_name)
 
-            template_data['raw_storage_container'] = item['raw_storage_container']
-            template_data['adf_storage_container'] = item['adf_storage_container']
+            template_data['raw_storage_container'] = item['raw_storage_container'].lower()
+            template_data['adf_storage_container'] = item['adf_storage_container'].lower()
             template_data['source_coll'] = item['source_coll']
             template_data['blob_name'] = blob_name
 
-            # TODO - should be:
-            # --filename tmp/openflights/openflights__planes.json \
             #local_file = self.config.mongoexport_file(self.dbname, item['source_coll'])
             template_data['local_file_path'] = item['local_file_path']
 
@@ -453,7 +451,7 @@ class ArtifactGenerator(object):
         self.generate_olympics_reference_db_scripts()
 
     def generate_openflights_reference_db_scripts(self):
-        dbname = 'openflights'
+        dbname = 'OpenFlights'
         outfile = '{}/databases/mongo_recreate_{}_db.sh'.format(
             self.config.app_dir, dbname)
         template_name = 'mongo_recreate_db.txt'
@@ -480,7 +478,7 @@ class ArtifactGenerator(object):
         self.render_template(template_name, template_data, outfile)
 
     def openflights_collection_names(self):
-        return 'airports,airlines,routes,planes,countries'.split(',')
+        return 'Airports,Airlines,Routes,Planes,Countries'.split(',')
 
     def generate_olympics_reference_db_scripts(self):
         dbname = 'olympics'

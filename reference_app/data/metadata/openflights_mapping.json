@@ -1,13 +1,13 @@
 {
-  "source_dbname": "openflights",
+  "source_dbname": "OpenFlights",
   "default_target_dbname": "travel",
-  "cosmos_db_autoscale_ru": 5000,
+  "cosmos_db_autoscale_ru": 4000,
   "collections": [
     {
-      "name": "airlines",
+      "name": "Airlines",
       "mapping": {
         "target_dbname": "travel",
-        "target_container": "airlines",
+        "target_container": "Airlines",
         "wrangling_algorithm": "standard",
         "pk_name": "pk",
         "pk_logic": [
@@ -25,10 +25,10 @@
       }
     },
     {
-      "name": "airports",
+      "name": "Airports",
       "mapping": {
         "target_dbname": "travel",
-        "target_container": "airports",
+        "target_container": "Airports",
         "wrangling_algorithm": "standard",
         "pk_name": "pk",
         "pk_logic": [
@@ -46,10 +46,10 @@
       }
     },
     {
-      "name": "countries",
+      "name": "Countries",
       "mapping": {
         "target_dbname": "travel",
-        "target_container": "countries",
+        "target_container": "Countries",
         "wrangling_algorithm": "standard",
         "pk_name": "pk",
         "pk_logic": [
@@ -67,10 +67,10 @@
       }
     },
     {
-      "name": "planes",
+      "name": "Planes",
       "mapping": {
         "target_dbname": "travel",
-        "target_container": "planes",
+        "target_container": "Planes",
         "wrangling_algorithm": "standard",
         "pk_name": "pk",
         "pk_logic": [
@@ -88,10 +88,10 @@
       }
     },
     {
-      "name": "routes",
+      "name": "Routes",
       "mapping": {
         "target_dbname": "travel",
-        "target_container": "routes",
+        "target_container": "Routes",
         "wrangling_algorithm": "standard",
         "pk_name": "pk",
         "pk_logic": [

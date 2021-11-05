@@ -54,6 +54,8 @@ This section summarizes the aboe content pages.
   - Ubuntu Linux VM(s)
     - Setup the VM(s)
   - Azure Data Factory, optional per migration strategy 
+- Create the Storage Blob containers with **create_blob_containers.sh**
+  - see [12 - Create the Azure Storage Containers](12_create_the_azure_storage_containers.md)tainers]
 - Execute the generated **xxx_cosmos_db_containers_az_cli.sh** scripts, where xxx is database name, see [13 - Create the CosmosDB Target Databases and Containers](13_create_the_cosmosdb_target_databases_and_containers.md)
 - Execute the generated **mongo_indexes_xxx_db.sh** scripts, where xxx is database name, see [14 - CosmosDB Container Indexing](14_cosmosdb_container_indexing.md)
 - Azure Data Factory setup, Optional, see [15 - ADF Setup with Git Source Control](15_adf_setup_with_git_source_control.md)

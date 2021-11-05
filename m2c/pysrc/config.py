@@ -114,10 +114,10 @@ class Config(object):
         return '{}__{}__wrangled.json'.format(dbname, cname)
 
     def blob_raw_container_name(self, source_db):
-        return '{}-raw'.format(source_db)
+        return '{}-raw'.format(source_db).lower()
 
     def blob_adf_container_name(self, target_db, target_coll):
-        return '{}-{}-adf'.format(target_db, target_coll)
+        return '{}-{}-adf'.format(target_db, target_coll).lower()
 
     def blob_download_dir(self, dbname):
         return '{}/downloads/{}'.format(self.data_dir, dbname)

@@ -1,7 +1,7 @@
 __author__  = 'Chris Joakim'
 __email__   = "chjoakim@microsoft.com"
 __license__ = "MIT"
-__version__ = "October 2021"
+__version__ = "November 2021"
 
 import json
 import os
@@ -48,8 +48,8 @@ class Manifest(object):
     def storage_container_names(self):
         uniques = dict()
         for item in self.items:
-            raw = item['raw_storage_container']
-            adf = item['adf_storage_container']
+            raw = item['raw_storage_container'].lower()
+            adf = item['adf_storage_container'].lower()
             uniques[raw] = 0
             uniques[adf] = 0
         return sorted(uniques.keys())
@@ -58,8 +58,8 @@ class Manifest(object):
         uniques = dict()
         for item in self.items:
             if item['source_db'] == dbname:
-                raw = item['raw_storage_container']
-                adf = item['adf_storage_container']
+                raw = item['raw_storage_container'].lower()
+                adf = item['adf_storage_container'].lower()
                 uniques[raw] = 0
                 uniques[adf] = 0
         return sorted(uniques.keys())

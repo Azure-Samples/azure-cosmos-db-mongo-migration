@@ -15,7 +15,7 @@ from operator import itemgetter
 from pysrc.config import Config
 
 # Class StandardMappingGenerator implements the "built-in" data mapping
-# generator.  It addresses the olympics and openflights reference databases
+# generator.  It addresses the olympics and OpenFlights reference databases
 # but otherwise creates generic mappings.
 
 class StandardMappingGenerator(object):
@@ -36,7 +36,7 @@ class StandardMappingGenerator(object):
             data['default_target_dbname'] = 'olympics'
             data['cosmos_db_autoscale_ru'] = 7000
 
-        elif self.dbname == 'openflights':
+        elif self.dbname == 'OpenFlights':
             data['default_target_dbname'] = 'travel'
             data['cosmos_db_autoscale_ru'] = 4000
 
@@ -61,7 +61,7 @@ class StandardMappingGenerator(object):
 
             if self.dbname == 'olympics':
                 self.customize_olympics_mapping(mapping)
-            if self.dbname == 'openflights':
+            if self.dbname == 'OpenFlights':
                 self.customize_openflights_mapping(mapping)
 
             coll_info['mapping'] = mapping
@@ -103,7 +103,9 @@ class StandardMappingGenerator(object):
     def customize_openflights_mapping(self, mapping):
         cname = mapping['target_container']
 
-        if cname == 'routes':
+        #mapping['target_container'] = cname.lower()
+
+        if cname == 'Routes':
             mapping['pk_logic'] = [ ['attribute', 'airline_id'] ] 
             mapping['doctype_logic'] = [ ['literal', 'route'] ] 
             mapping['additions'] = [

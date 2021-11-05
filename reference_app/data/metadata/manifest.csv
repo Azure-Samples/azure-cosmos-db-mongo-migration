@@ -1,4 +1,9 @@
 Source DB,Source Coll,Doc Count,Avg Doc Size,Target DB,Target Coll,Partition Key,Blob Name,Raw Storage Container,ADF Storage Container,ADF Blob Doc Count,ADF Blob Dataset Name,ADF Cosmos Dataset Name,ADF Pipeline Name
+OpenFlights,Airlines,6161,170,travel,Airlines,pk,OpenFlights__Airlines.json,openflights-raw,travel-airlines-adf,-1,blob__travel__Airlines,cosmos__travel__Airlines,pipeline_copy_to_travel_Airlines
+OpenFlights,Airports,7698,341,travel,Airports,pk,OpenFlights__Airports.json,openflights-raw,travel-airports-adf,-1,blob__travel__Airports,cosmos__travel__Airports,pipeline_copy_to_travel_Airports
+OpenFlights,Countries,261,79,travel,Countries,pk,OpenFlights__Countries.json,openflights-raw,travel-countries-adf,-1,blob__travel__Countries,cosmos__travel__Countries,pipeline_copy_to_travel_Countries
+OpenFlights,Planes,246,80,travel,Planes,pk,OpenFlights__Planes.json,openflights-raw,travel-planes-adf,-1,blob__travel__Planes,cosmos__travel__Planes,pipeline_copy_to_travel_Planes
+OpenFlights,Routes,67663,229,travel,Routes,pk,OpenFlights__Routes.json,openflights-raw,travel-routes-adf,-1,blob__travel__Routes,cosmos__travel__Routes,pipeline_copy_to_travel_Routes
 olympics,countries,230,69,olympics,locations,pk,olympics__countries.json,olympics-raw,olympics-locations-adf,-1,blob__olympics__locations,cosmos__olympics__locations,pipeline_copy_to_olympics_locations
 olympics,g1896_summer,380,323,olympics,games,pk,olympics__g1896_summer.json,olympics-raw,olympics-games-adf,-1,blob__olympics__games,cosmos__olympics__games,pipeline_copy_to_olympics_games
 olympics,g1900_summer,1936,320,olympics,games,pk,olympics__g1900_summer.json,olympics-raw,olympics-games-adf,-1,blob__olympics__games,cosmos__olympics__games,pipeline_copy_to_olympics_games
@@ -52,8 +57,3 @@ olympics,g2012_summer,12920,324,olympics,games,pk,olympics__g2012_summer.json,ol
 olympics,g2014_winter,4891,329,olympics,games,pk,olympics__g2014_winter.json,olympics-raw,olympics-games-adf,-1,blob__olympics__games,cosmos__olympics__games,pipeline_copy_to_olympics_games
 olympics,g2016_summer,13688,331,olympics,games,pk,olympics__g2016_summer.json,olympics-raw,olympics-games-adf,-1,blob__olympics__games,cosmos__olympics__games,pipeline_copy_to_olympics_games
 olympics,games,51,64,olympics,locations,pk,olympics__games.json,olympics-raw,olympics-locations-adf,-1,blob__olympics__locations,cosmos__olympics__locations,pipeline_copy_to_olympics_locations
-openflights,airlines,6161,170,travel,airlines,pk,openflights__airlines.json,openflights-raw,travel-airlines-adf,-1,blob__travel__airlines,cosmos__travel__airlines,pipeline_copy_to_travel_airlines
-openflights,airports,7698,341,travel,airports,pk,openflights__airports.json,openflights-raw,travel-airports-adf,-1,blob__travel__airports,cosmos__travel__airports,pipeline_copy_to_travel_airports
-openflights,countries,261,79,travel,countries,pk,openflights__countries.json,openflights-raw,travel-countries-adf,-1,blob__travel__countries,cosmos__travel__countries,pipeline_copy_to_travel_countries
-openflights,planes,246,80,travel,planes,pk,openflights__planes.json,openflights-raw,travel-planes-adf,-1,blob__travel__planes,cosmos__travel__planes,pipeline_copy_to_travel_planes
-openflights,routes,67663,229,travel,routes,pk,openflights__routes.json,openflights-raw,travel-routes-adf,-1,blob__travel__routes,cosmos__travel__routes,pipeline_copy_to_travel_routes

@@ -8,11 +8,11 @@ Usage:
   python main.py generate_games_import_commands   > tmp/games_import_commands.txt
   python main.py generate_mongo_init_commands     > tmp/mongo_init_commands.txt
   -
-  python main.py parse_openflights_data airports  > olympics/import_json/airports.json
-  python main.py parse_openflights_data airlines  > olympics/import_json/airlines.json
-  python main.py parse_openflights_data routes    > olympics/import_json/routes.json
-  python main.py parse_openflights_data planes    > olympics/import_json/planes.json
-  python main.py parse_openflights_data countries > olympics/import_json/countries.json
+  python main.py parse_openflights_data airports  > openflights/import_json/airports.json
+  python main.py parse_openflights_data airlines  > openflights/import_json/airlines.json
+  python main.py parse_openflights_data routes    > openflights/import_json/routes.json
+  python main.py parse_openflights_data planes    > openflights/import_json/planes.json
+  python main.py parse_openflights_data countries > openflights/import_json/countries.json
   -
 Options:
   -h --help     Show this screen.
@@ -36,7 +36,7 @@ RAW_COUNTRIES          = '../olympics/raw/noc_regions.csv'
 PARSED_ATHLETTE_EVENTS = '../olympics/raw/athlete_events_parsed.csv'
 GAMES_JSON             = '../olympics/import_json/games.json'
 PARSED_CSV_FIELD_DELIM = '|'
-VERSION = 'October 2021'
+VERSION = 'November 2021'
 
 
 def print_options(msg):

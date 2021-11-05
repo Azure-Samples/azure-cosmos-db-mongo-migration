@@ -1,7 +1,7 @@
 {
   "source_dbname": "olympics",
   "default_target_dbname": "olympics",
-  "cosmos_db_autoscale_ru": 10000,
+  "cosmos_db_autoscale_ru": 7000,
   "collections": [
     {
       "name": "countries",

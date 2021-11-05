@@ -1,7 +1,7 @@
 __author__  = 'Chris Joakim'
 __email__   = "chjoakim@microsoft.com"
 __license__ = "MIT"
-__version__ = "October 2021"
+__version__ = "November 2021"
 
 import json
 import os
@@ -61,8 +61,8 @@ class ManifestGenerator(object):
                 doc_count   = self.doc_count(metadata, source_coll)
                 doc_size    = self.avg_doc_size(metadata, source_coll)
                 blob_name          = self.config.blob_name(source_db, source_coll)
-                raw_blob_container = self.config.blob_raw_container_name(source_db)
-                adf_blob_container = self.config.blob_adf_container_name(target_db, target_coll)
+                raw_blob_container = self.config.blob_raw_container_name(source_db).lower()
+                adf_blob_container = self.config.blob_adf_container_name(target_db, target_coll).lower()
                 adf_blob_dataset   = self.config.blob_dataset_name(target_db, target_coll)
                 adf_cosmos_dataset = self.config.cosmos_dataset_name(target_db, target_coll)
                 adf_pipeline       = self.config.adf_pipeline_name(target_db, target_coll) 
