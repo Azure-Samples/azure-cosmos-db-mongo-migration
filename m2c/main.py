@@ -101,7 +101,7 @@ def extract_db_metadata(login_db, dbname):
 
         db_metadata['collections'].append(coll_info)
 
-    db_metadata['dbstats'] = db.command('dbstats')
+    #db_metadata['dbstats'] = db.command('dbstats')  # Not JSON serializable in some Atlas cases
 
     jstr = json.dumps(db_metadata, sort_keys=False, indent=2)
     outfile = config.db_metadata_file(dbname)
