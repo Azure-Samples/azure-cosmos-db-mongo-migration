@@ -1,7 +1,7 @@
 __author__  = 'Chris Joakim'
 __email__   = "chjoakim@microsoft.com"
 __license__ = "MIT"
-__version__ = "October 2021"
+__version__ = "December 2021"
 
 import glob
 import json
@@ -98,6 +98,8 @@ class StandardDocumentWrangler(object):
         print('  do_excludes:          {}'.format(self.do_excludes))
 
     def wrangle(self, doc):
+        # self.preprocess_document(doc)  # <-- custom logic
+
         if self.do_pk_wrangling:
             self.wrangle_pk(doc)
 
@@ -109,6 +111,18 @@ class StandardDocumentWrangler(object):
 
         if self.do_excludes:
             self.wrangle_excludes(doc)
+
+    def preprocess_document(self, doc):
+        # this method can be used to augment the given document - to add new attributes
+        # and modify others. This example calculates and adds a yyyy year value from 
+        # an epoch millisecond timestamp value, if present.
+        if 'timestamp' in doc.keys():
+            try:
+                timestamp = float(doc['timestamp'])  # a value like 1623413063000.0
+                dt = datetime.datetime.fromtimestamp(timestamp / 1000.0)
+                doc['timestamp_year'] = dt.year
+            except:
+                doc['timestamp_year'] = 0
 
     def wrangle_pk(self, doc):
         values = list()
