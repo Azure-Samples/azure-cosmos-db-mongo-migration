@@ -9,7 +9,7 @@
 # --simple-noblob
 # --simple-verbatim
 # --simple-noblob-verbatim
-export M2C_APP_ARTIFACTS="--all"
+export M2C_APP_ARTIFACTS="--simple-noblob"
 
 
 # M2C_APP_DIR defines the root directory where the generated artifacts are written to.
