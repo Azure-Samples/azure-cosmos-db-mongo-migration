@@ -34,9 +34,11 @@ The current focus of this project is on migrating MongoDB databases to the
 **CosmosDB/Mongo API**, but the process can easily be modified to target the
 **CosmosDB/SQL API**.
 
-## Other Microsoft Solutions to Consider
+## Other Migration Solutions to Consider
 
-- https://docs.microsoft.com/en-us/azure/cosmos-db/import-data  (DMT for Cosmos/SQL)
-- https://docs.microsoft.com/en-us/azure/dms/tutorial-mongodb-cosmos-db  (DMS)
-- https://azure.microsoft.com/en-us/services/database-migration/#features (DMS)
-- https://github.com/cjoakim/azure-cosmosdb-adhoc-migrations
+- [mongoexport / mongoimport utilities](https://docs.mongodb.com/database-tools/mongoexport/)
+- [Asure Data Factory](https://azure.microsoft.com/en-us/services/data-factory/)
+- [Striim](https://www.striim.com/docs/en/mongodb.html)
+- [Data Migration Service (DMS) - tutorial](https://docs.microsoft.com/en-us/azure/dms/tutorial-mongodb-cosmos-db)
+- [Data Migration Service (DMS) - features](https://azure.microsoft.com/en-us/services/database-migration/#features) 
+- [Data Migration Tool](https://docs.microsoft.com/en-us/azure/cosmos-db/import-data)
