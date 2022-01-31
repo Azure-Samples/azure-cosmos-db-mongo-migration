@@ -1,25 +1,45 @@
 # azure-cosmos-db-mongo-migration
 
-## MongoDB to CosmosDB Migrations: Factors to Consider
+## MongoDB to CosmosDB Migrations: Questions to Consider
 
-### Database/schema design
+### Migration Context?
 
-  - Is it a **verbatim** migration?
-  - Do you want to **optimize/refactor** the design?
-  - Do you want to **optimize for CosmosDB costs and Autoscaling**?
-  - Large documents over 2MB
+- Reason(s) for the migration
+  - Other goals beyond moving the data to another DB
+- Number of databases and collections/containers
+- Amount of data
+- Network bandwidth to Azure
+- Batch vs Streaming
+- Global Locations / Regions
+- Timeframe
 
-### CosmosDB Target API
+### Database/Schema design?
 
-  - Mongo 4.x?
-  - Or Core/SQL API?
+- Is it a **verbatim** migration?
+- Do you want to **optimize/refactor** the design?
+- Do you want to **optimize for CosmosDB costs and Autoscaling**?
+- Large documents over 2MB
+- Sharding / Horizontal Partitioning / Partition Keys
+
+### CosmosDB Target API?
+
+- CosmosDB/Mongo 4.x
+- CosmosDB/Core API  (aka - CosmosDB/SQL API)
+- Other
 
 ### What are your preferred technologies?
 
-  - Linux/Python
-  - DotNet
-  - Azure Data Factory
-  - Other
+- Linux/Bash/Python
+- DotNet
+- Azure Data Factory
+- Other
+
+### Who is involved in executing the migration?
+
+- The Application Developers
+- The DevOps team
+- Third-party Vendor, Partner, or Systems Integrator
+- Microsoft 
 
 ### Migration Solutions to Consider
 
