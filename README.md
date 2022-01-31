@@ -8,12 +8,15 @@ This repo: https://github.com/Azure-Samples/azure-cosmos-db-mongo-migration
 
 - Reason(s) for the migration
   - Other goals beyond moving the data to another DB
+- Source Database
+- Target Database(s)
 - Number of databases and collections/containers
 - Amount of data
 - Network bandwidth to Azure
 - Batch vs Streaming
 - Global Locations / Regions
 - Timeframe
+- Other Requirements / Constraints
 
 ### Database/Schema design?
 
@@ -62,6 +65,7 @@ This repo: https://github.com/Azure-Samples/azure-cosmos-db-mongo-migration
 This project framework provides the following features:
 
 - **MongoDB to CosmosDB Data Migration**
+- **Optional Data Transformation**
 - **Several migration approaches are supported** by this project, including:
   - mongoexport from source database is used in all cases
   - optional verbatim migrations
