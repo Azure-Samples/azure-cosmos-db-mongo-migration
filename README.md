@@ -54,6 +54,7 @@ This repo: https://github.com/Azure-Samples/azure-cosmos-db-mongo-migration
 - [Data Migration Service (DMS) - tutorial](https://docs.microsoft.com/en-us/azure/dms/tutorial-mongodb-cosmos-db)
 - [Data Migration Service (DMS) - features](https://azure.microsoft.com/en-us/services/database-migration/#features) 
 - [Data Migration Tool](https://docs.microsoft.com/en-us/azure/cosmos-db/import-data)
+- [Data Migration Assistant Notebook](https://github.com/AzureCosmosDB/Cosmos-DB-Migration-Assistant-for-API-for-MongoDB)
 - **This Code-based Migration Process in this repository**
 
 ---
