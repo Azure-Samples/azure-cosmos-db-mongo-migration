@@ -32,6 +32,14 @@ This repo: https://github.com/Azure-Samples/azure-cosmos-db-mongo-migration
 - CosmosDB/Core API  (aka - CosmosDB/SQL API)
 - Other
 
+#### CosmosDB Mongo API Feature Support
+
+- https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb/mongodb-introduction
+- https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb/feature-support-42
+- https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb/feature-support-40
+- https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb/feature-support-36
+- https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb/feature-support-32
+
 ### What are your preferred technologies?
 
 - Linux/Bash/Python
