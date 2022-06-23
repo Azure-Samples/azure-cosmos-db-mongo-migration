@@ -38,8 +38,9 @@ The current focus of this project is on migrating MongoDB databases to the
 
 - [mongoexport/mongoimport or mongodump/mongorestore](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb/tutorial-mongotools-cosmos-db)
 - [Azure Data Factory](https://azure.microsoft.com/en-us/services/data-factory/)
-- [Striim](https://www.striim.com/docs/en/mongodb.html)
+- [Apache Spark with MongoDB Connector](https://www.mongodb.com/products/spark-connector)
 - [Data Migration Service (DMS) - tutorial](https://docs.microsoft.com/en-us/azure/dms/tutorial-mongodb-cosmos-db)
 - [Data Migration Service (DMS) - features](https://azure.microsoft.com/en-us/services/database-migration/#features) 
 - [Data Migration Tool](https://docs.microsoft.com/en-us/azure/cosmos-db/import-data)
 - **This Code-based Migration Process in this repository**
+
